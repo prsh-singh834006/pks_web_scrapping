@@ -27,4 +27,4 @@ if __name__ == '__main__':
         arg = sys.argv[1]
         web_scrap(kw=arg)
     except (TypeError, ValueError, FileNotFoundError, FileExistsError) as e:
-        print('Something went bad :)')
+        print('Something went wrong :)')
