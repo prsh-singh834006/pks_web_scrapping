@@ -5,6 +5,12 @@ from bs4 import BeautifulSoup
 
 
 def web_scrap(kw='as'):
+    """
+    This method takes kw as an argument and loads www.shopping.com.
+    It saves all the item's name and price in a deals.csv files
+    :param kw: Int
+    :return: None
+    """
     page = request.urlopen('http://shopping.com/products?KW={}'.format(kw))
     soup = BeautifulSoup(page, 'html.parser')
     deals = soup.find_all('div', 'deal')
